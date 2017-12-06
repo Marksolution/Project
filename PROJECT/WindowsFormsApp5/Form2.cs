@@ -21,7 +21,7 @@ namespace WindowsFormsApp5
         {
 
             Form4 f1 = new Form4();
-            Form4.name_m = "1";
+            Form4.name_m = "SUCIDE SQUAD : 11:30 : CINEMA 1";
             Form4.time = 00;
             f1.Show();
              
@@ -30,7 +30,7 @@ namespace WindowsFormsApp5
         private void button6_Click(object sender, EventArgs e)
         {
             Form4 f2 = new Form4();
-            Form4.name_m = "2";
+            Form4.name_m = "SUCIDE SQUAD : 13:30 : CINEMA 1";
             Form4.time = 00;
             f2.Show();
         }
@@ -38,60 +38,80 @@ namespace WindowsFormsApp5
         private void button7_Click(object sender, EventArgs e)
         {
             Form4 f3 = new Form4();
+            Form4.name_m = "SUCIDE SQUAD : 17:30 : CINEMA 1";
+            Form4.time = 00;
             f3.Show();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             Form4 f4 = new Form4();
+            Form4.name_m = "IRON MAN3 : 10:00 : CINEMA 2";
+            Form4.time = 00;
             f4.Show();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             Form4 f5 = new Form4();
+            Form4.name_m = "IRON MAN3 : 12:30 : CINEMA 2";
+            Form4.time = 00;
             f5.Show();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             Form4 f6 = new Form4();
+            Form4.name_m = "IRON MAN3 : 14:15 : CINEMA 2";
+            Form4.time = 00;
             f6.Show();
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
             Form4 f7 = new Form4();
+            Form4.name_m = "FAST 8 : 12:30 : CINEMA 3";
+            Form4.time = 00;
             f7.Show();
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
             Form4 f8 = new Form4();
+            Form4.name_m = "FAST 8 : 14:00 : CINEMA 3";
+            Form4.time = 00;
             f8.Show();
         }
 
         private void button13_Click(object sender, EventArgs e)
         {
             Form4 f9 = new Form4();
+            Form4.name_m = "FAST 8 : 18:30 : CINEMA 3";
+            Form4.time = 00;
             f9.Show();
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
             Form4 f10 = new Form4();
+            Form4.name_m = "DUNKIRK : 11:30 : CINEMA 4";
+            Form4.time = 00;
             f10.Show();
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
             Form4 f11 = new Form4();
+            Form4.name_m = "DUNKIRK : 13:45 : CINEMA 4";
+            Form4.time = 00;
             f11.Show();
         }
 
         private void button16_Click(object sender, EventArgs e)
         {
             Form4 f12 = new Form4();
+            Form4.name_m = "DUNKIRK : 16:30 : CINEMA 4";
+            Form4.time = 00;
             f12.Show();
         }
 
@@ -242,9 +262,9 @@ namespace WindowsFormsApp5
             DateTime m = DateTime.Now;
             textBox5.Text = m.ToString("hh:mm:ss dd/MM/yyyy");
             timer1.Start();
-           /* int num = 1;
+          /* int num = 1;
             string[] s = new string[] { "a", "b", "c", "d", "e", "f", "g", "h", "j", "k", "l" };
-            while (num <= 11)
+            while (num <= 12)
             {
                 string txt1 = "0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n";
                 int i = 0;

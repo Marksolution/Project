@@ -27,12 +27,13 @@ namespace WindowsFormsApp5
         }
         private void button8_Click(object sender, EventArgs e)
         {
+
             textBox3.Text = (int.Parse(tb2.Text) - int.Parse(tb1.Text)).ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string txt = textBox3.Text;
+            string txt = textBox3.Text,tb1,tb2;
             System.IO.File.WriteAllText(@"E:\"  + "print.txt", txt);
             System.Diagnostics.ProcessStartInfo psi = new System.Diagnostics.ProcessStartInfo(@"E:\" + "print.txt");
             psi.Verb = "PRINT";

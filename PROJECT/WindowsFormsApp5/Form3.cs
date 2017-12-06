@@ -60,7 +60,7 @@ namespace WindowsFormsApp5
             }
             num1.Text = num.ToString();
             string txt = string.Join("\r\n", lines);
-            System.IO.File.WriteAllText(@"E:\data_new\" + name+"1.txt", txt);
+            System.IO.File.WriteAllText(@"E:\data_new\" + name + name_m + ".txt", txt);
             run(name,cb);
         }
         private void button222_Click(object sender, EventArgs e)
