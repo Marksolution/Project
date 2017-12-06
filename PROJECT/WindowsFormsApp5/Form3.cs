@@ -14,14 +14,17 @@ namespace WindowsFormsApp5
     {
         CheckBox[] ok,l,k,j,h,g,f,e0,d,c,b,a0;
         string[] lines;
+        public static string name_m;
+        public static int time;
         public static int num = 0;
+        public static int num0=0;
         public Form4()
         {
             InitializeComponent();
         }
         public string[] run_file(string name)
         {
-            lines = System.IO.File.ReadAllLines(@"E:\"+name+"1.txt");
+            lines = System.IO.File.ReadAllLines(@"E:\data_new\" + name+name_m+".txt");
             return lines;
         }
         public void run(string name,CheckBox[] b)
@@ -57,29 +60,60 @@ namespace WindowsFormsApp5
             }
             num1.Text = num.ToString();
             string txt = string.Join("\r\n", lines);
-            System.IO.File.WriteAllText(@"E:\"+name+"1.txt", txt);
+            System.IO.File.WriteAllText(@"E:\data_new\" + name+"1.txt", txt);
             run(name,cb);
         }
         private void button222_Click(object sender, EventArgs e)
         {
-            num = 0;
+            //num = 0;
             save_db("l", l);
             save_db("k", k);
             save_db("j", j);
             save_db("h", h);
             save_db("g", g);
             save_db("f", f);
-            save_db("e0", e0);
+            save_db("e", e0);
             save_db("d", d);
             save_db("c", c);
             save_db("b", b);
-            save_db("a0", a0);
+            save_db("a", a0);
+            get_all_price();
             Form f5 = new Form3();
             f5.Show();
         }
+        private int price(CheckBox[] ok_copy,int pp)
+        {
+            int i =0,p=0;
+            while (i < ok_copy.Length)
+            {
+                if (ok_copy[i].Checked == true)
+                {
+                    p += pp;
+                }
+                i++;
+            }
+            return p;
+        }
+        public void get_all_price()
+        {
+            int o = 0;
+            num0 += price(l, 120);
+            num0 += price(k, 120);
+            num0 += price(j, 120);
+            num0 += price(h, 120);
+            num0 += price(g, 140);
+            num0 += price(f, 140);
+            num0 += price(e0,140);
+            num0 += price(d, 140);
+            num0 += price(c, 140);
+            num0 += price(b, 160);
+            num0 += price(a0, 160);
+          
 
+        }
         private void Form4_Load(object sender, EventArgs e)
         {
+            MessageBox.Show(name_m);
             l = new CheckBox[] { l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, l11, l12, l13, l14, l15, l16, l17, l18, l19, l20 };
             k = new CheckBox[] { k1, k2, k3, k4, k5, k6, k7, k8, k9, k10, k11, k12, k13, k14, k15, k16, k17, k18, k19, k20 };
             j = new CheckBox[] { j1, j2, j3, j4, j5, j6, j7, j8, j9, j10, j11, j12, j13, j14, j15, j16, j17, j18, j19, j20 };
@@ -98,13 +132,14 @@ namespace WindowsFormsApp5
             run("h", h);
             run("g", g);
             run("f", f);
-            run("e0", e0);
+            run("e", e0);
             run("d", d);
             run("c", c);
             run("b", b);
-            run("a0", a0);
+            run("a", a0);
+            //num01 = 
+                
             //run();
-
         }
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.button6 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tb1 = new System.Windows.Forms.TextBox();
             this.button141 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.button181 = new System.Windows.Forms.Button();
@@ -40,7 +40,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tb2 = new System.Windows.Forms.TextBox();
             this.button8 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -51,6 +51,9 @@
             this.label12 = new System.Windows.Forms.Label();
             this.num1 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
+            this.m1 = new System.Windows.Forms.CheckBox();
+            this.m2 = new System.Windows.Forms.CheckBox();
+            this.m3 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // button6
@@ -65,16 +68,15 @@
             this.button6.Text = "Buy";
             this.button6.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // tb1
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.textBox1.Location = new System.Drawing.Point(143, 251);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(114, 25);
-            this.textBox1.TabIndex = 6;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.tb1.Location = new System.Drawing.Point(143, 251);
+            this.tb1.Multiline = true;
+            this.tb1.Name = "tb1";
+            this.tb1.Size = new System.Drawing.Size(114, 25);
+            this.tb1.TabIndex = 6;
+            this.tb1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button141
             // 
@@ -176,26 +178,27 @@
             this.label8.TabIndex = 411;
             this.label8.Text = "ราคารวม";
             // 
-            // textBox2
+            // tb2
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.textBox2.Location = new System.Drawing.Point(143, 288);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(114, 25);
-            this.textBox2.TabIndex = 412;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.tb2.Location = new System.Drawing.Point(143, 288);
+            this.tb2.Multiline = true;
+            this.tb2.Name = "tb2";
+            this.tb2.Size = new System.Drawing.Size(114, 25);
+            this.tb2.TabIndex = 412;
+            this.tb2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.button8.Location = new System.Drawing.Point(182, 319);
+            this.button8.Location = new System.Drawing.Point(188, 319);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 28);
+            this.button8.Size = new System.Drawing.Size(69, 30);
             this.button8.TabIndex = 413;
             this.button8.Text = "คำนวณ";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // label9
             // 
@@ -211,8 +214,8 @@
             // textBox3
             // 
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.textBox3.Location = new System.Drawing.Point(143, 353);
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.textBox3.Location = new System.Drawing.Point(143, 355);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(114, 25);
@@ -233,7 +236,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label11.Location = new System.Drawing.Point(61, 353);
+            this.label11.Location = new System.Drawing.Point(61, 355);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(76, 25);
             this.label11.TabIndex = 419;
@@ -248,8 +251,9 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(98, 40);
             this.button2.TabIndex = 420;
-            this.button2.Text = "เสร็จสิ้น";
+            this.button2.Text = "Print";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -293,12 +297,45 @@
             this.button5.Text = "M";
             this.button5.UseVisualStyleBackColor = true;
             // 
+            // m1
+            // 
+            this.m1.AutoSize = true;
+            this.m1.Enabled = false;
+            this.m1.Location = new System.Drawing.Point(35, 101);
+            this.m1.Name = "m1";
+            this.m1.Size = new System.Drawing.Size(15, 14);
+            this.m1.TabIndex = 426;
+            this.m1.UseVisualStyleBackColor = true;
+            // 
+            // m2
+            // 
+            this.m2.AutoSize = true;
+            this.m2.Enabled = false;
+            this.m2.Location = new System.Drawing.Point(35, 134);
+            this.m2.Name = "m2";
+            this.m2.Size = new System.Drawing.Size(15, 14);
+            this.m2.TabIndex = 427;
+            this.m2.UseVisualStyleBackColor = true;
+            // 
+            // m3
+            // 
+            this.m3.AutoSize = true;
+            this.m3.Enabled = false;
+            this.m3.Location = new System.Drawing.Point(35, 169);
+            this.m3.Name = "m3";
+            this.m3.Size = new System.Drawing.Size(15, 14);
+            this.m3.TabIndex = 428;
+            this.m3.UseVisualStyleBackColor = true;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp5.Properties.Resources.acjbg;
             this.ClientSize = new System.Drawing.Size(285, 468);
+            this.Controls.Add(this.m3);
+            this.Controls.Add(this.m2);
+            this.Controls.Add(this.m1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.num1);
             this.Controls.Add(this.label12);
@@ -309,7 +346,7 @@
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button8);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tb2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -320,7 +357,7 @@
             this.Controls.Add(this.button181);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button141);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tb1);
             this.Controls.Add(this.button6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form3";
@@ -332,7 +369,7 @@
 
         #endregion
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tb1;
         private System.Windows.Forms.Button button141;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button181;
@@ -343,7 +380,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tb2;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox3;
@@ -354,5 +391,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox num1;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.CheckBox m1;
+        private System.Windows.Forms.CheckBox m2;
+        private System.Windows.Forms.CheckBox m3;
     }
 }

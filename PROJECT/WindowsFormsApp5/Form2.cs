@@ -21,6 +21,8 @@ namespace WindowsFormsApp5
         {
 
             Form4 f1 = new Form4();
+            Form4.name_m = "1";
+            Form4.time = 00;
             f1.Show();
              
         }
@@ -28,6 +30,8 @@ namespace WindowsFormsApp5
         private void button6_Click(object sender, EventArgs e)
         {
             Form4 f2 = new Form4();
+            Form4.name_m = "2";
+            Form4.time = 00;
             f2.Show();
         }
 
@@ -238,6 +242,20 @@ namespace WindowsFormsApp5
             DateTime m = DateTime.Now;
             textBox5.Text = m.ToString("hh:mm:ss dd/MM/yyyy");
             timer1.Start();
+           /* int num = 1;
+            string[] s = new string[] { "a", "b", "c", "d", "e", "f", "g", "h", "j", "k", "l" };
+            while (num <= 11)
+            {
+                string txt1 = "0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n";
+                int i = 0;
+                while (i < s.Length)
+                {
+                    System.IO.File.WriteAllText(@"E:\data_new\" +s[i]+num +".txt", txt1);
+                    i++;
+                }
+                num++;
+               
+            }*/
 
         }
     }
